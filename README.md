@@ -1,7 +1,7 @@
 # 🚗 Parcheggio automatizzato CLI con Architettura FSMD (sintesi logica SIS)
 
 
-## DESCRIZIONE:
+## BREVE DESCRIZIONE:
 Elaborato sviluppato in coppia per l'esame di Architettura degli Elaboratori (laboratorio) [Anno 2023].  
 
 Il progetto consiste nella gestione di un parcheggio automatizzato per automobili.  
