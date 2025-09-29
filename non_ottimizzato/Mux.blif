@@ -1,0 +1,21 @@
+.model Mux
+.inputs S I0 I1 I2 I3 I4
+.outputs O0 O1 O2 O3 O4
+
+.names S I0 O0
+11 1
+
+.names S I1 O1
+11 1
+
+.names S I2 O2
+11 1
+
+.names S I3 O3
+11 1
+
+.names S I4 O4
+11 1
+
+.end
+

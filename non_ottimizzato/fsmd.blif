@@ -1,0 +1,21 @@
+.model fsmd
+.inputs IN OUT SECTOR1 SECTOR2 SECTOR3
+.outputs SETTORE_NON_VALIDO SBARRA_IN SBARRA_OUT SECTOR_A SECTOR_B SECTOR_C
+
+
+
+.subckt FSM out=IN in=OUT sa=SECTOR1 sb=SECTOR2 sc=SECTOR3 pa=pa pb=pb pc=pc err=SETTORE_NON_VALIDO sb.in=SBARRA_IN sb.out=SBARRA_OUT s1=s1 s2=s2 s3=s3 l1=L1 l2=L2 start=start r=r
+
+.subckt datapath V0=IN V1=OUT V2=SECTOR1 V3=SECTOR2 V4=SECTOR3 S1=s1 S2=s2 S3=s3 START=start L1=L1 L2=L2 PA=SECTOR_A PB=SECTOR_B PC=SECTOR_C r=r
+
+
+.subckt registro1 A=SECTOR_A OUT=pa
+.subckt registro1 A=SECTOR_B OUT=pb
+.subckt registro1 A=SECTOR_C OUT=pc
+
+
+.search FSM.blif
+.search datapath.blif
+
+.end
+

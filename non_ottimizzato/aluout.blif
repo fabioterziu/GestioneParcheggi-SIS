@@ -1,0 +1,10 @@
+.model aluout
+.inputs I r
+.outputs O
+
+
+.names I r O
+-1 0
+00 0
+.end
+

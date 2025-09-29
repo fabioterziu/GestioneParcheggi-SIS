@@ -1,0 +1,6 @@
+.model registro1
+.inputs A
+.outputs OUT
+.latch A OUT re NIL 0
+.end
+

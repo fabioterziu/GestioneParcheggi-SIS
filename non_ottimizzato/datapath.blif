@@ -1,0 +1,23 @@
+.model datapath
+.inputs V0 V1 V2 V3 V4 S1 S2 S3 L1 L2 START r
+.outputs PA PB PC
+
+
+
+.subckt Mux I0=V0 I1=V1 I2=V2 I3=V3 I4=V4 S=START O0=O0 O1=O1 O2=O2 O3=O3 O4=O4
+.subckt Demuxabc I0=O0 I1=O1 I2=O2 I3=O3 I4=O4 S1=L1 S2=L2 A0=A0 A1=A1 A2=A2 A3=A3 A4=A4 B0=B0 B1=B1 B2=B2 B3=B3 B4=B4 C0=C0 C1=C1 C2=C2 C3=C3 C4=C4
+
+.subckt SA X0=A0 X1=A1 X2=A2 X3=A3 X4=A4 S=S1 PA=PA START=START r=r
+
+.subckt SB X0=B0 X1=B1 X2=B2 X3=B3 X4=B4 S=S2 PB=PB START=START r=r
+
+.subckt SC X0=C0 X1=C1 X2=C2 X3=C3 X4=C4 S=S3 PC=PC START=START r=r
+
+
+.search Mux.blif
+.search Demuxabc.blif
+.search SA.blif
+.search SB.blif
+.search SC.blif
+
+.end

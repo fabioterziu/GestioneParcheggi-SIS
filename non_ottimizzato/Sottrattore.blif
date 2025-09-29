@@ -1,0 +1,14 @@
+.model Sottrattore
+.inputs A0 A1 A2 A3 A4 B0 B1 B2 B3 B4 BIN
+.outputs O0 O1 O2 O3 O4 BOUT
+
+.subckt Sott1bit A=A4 B=B4 BIN=BIN O=O4 BOUT=X3
+.subckt Sott1bit A=A3 B=B3 BIN=X3 O=O3 BOUT=X2
+.subckt Sott1bit A=A2 B=B2 BIN=X2 O=O2 BOUT=X1
+.subckt Sott1bit A=A1 B=B1 BIN=X1 O=O1 BOUT=X0
+.subckt Sott1bit A=A0 B=B0 BIN=X0 O=O0 BOUT=BOUT
+
+.search Sott1bit.blif
+
+.end
+

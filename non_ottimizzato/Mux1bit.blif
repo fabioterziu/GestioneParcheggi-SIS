@@ -1,0 +1,10 @@
+.model Mux1bit
+.inputs S I0 I1
+.outputs O0
+
+.names S I0 I1 O0
+01- 1
+1-1 1
+
+.end
+

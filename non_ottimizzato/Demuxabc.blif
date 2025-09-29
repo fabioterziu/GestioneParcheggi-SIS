@@ -1,0 +1,37 @@
+.model Demuxabc
+.inputs I0 I1 I2 I3 I4 S1 S2
+.outputs A0 A1 A2 A3 A4 B0 B1 B2 B3 B4 C0 C1 C2 C3 C4
+
+.names I0 S1 S2 A0
+101 1
+.names I1 S1 S2 A1
+101 1
+.names I2 S1 S2 A2
+101 1
+.names I3 S1 S2 A3
+101 1
+.names I4 S1 S2 A4
+101 1
+.names I0 S1 S2 B0
+110 1
+.names I1 S1 S2 B1
+110 1
+.names I2 S1 S2 B2
+110 1
+.names I3 S1 S2 B3
+110 1
+.names I4 S1 S2 B4
+110 1
+.names I0 S1 S2 C0
+111 1
+.names I1 S1 S2 C1
+111 1
+.names I2 S1 S2 C2
+111 1
+.names I3 S1 S2 C3
+111 1
+.names I4 S1 S2 C4
+111 1
+
+.end
+

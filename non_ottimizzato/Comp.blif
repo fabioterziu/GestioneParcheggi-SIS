@@ -1,0 +1,17 @@
+.model Comp
+.inputs I0 I1 I2 I3 I4 X0 X1 X2 X3 X4
+.outputs PA
+
+.subckt Xnor A=I0 B=X0 OUT=OUT0
+.subckt Xnor A=I1 B=X1 OUT=OUT1
+.subckt Xnor A=I2 B=X2 OUT=OUT2
+.subckt Xnor A=I3 B=X3 OUT=OUT3
+.subckt Xnor A=I4 B=X4 OUT=OUT4
+
+.names OUT0 OUT1 OUT2 OUT3 OUT4 PA
+11111 1
+
+.search Xnor.blif
+
+.end
+

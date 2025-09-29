@@ -1,0 +1,14 @@
+.model Sommatore
+.inputs A0 A1 A2 A3 A4 B0 B1 B2 B3 B4 CIN
+.outputs O0 O1 O2 O3 O4 COUT
+
+.subckt Somma1bit A=A4 B=B4 CIN=CIN O=O4 COUT=C3
+.subckt Somma1bit A=A3 B=B3 CIN=C3 O=O3 COUT=C2
+.subckt Somma1bit A=A2 B=B2 CIN=C2 O=O2 COUT=C1
+.subckt Somma1bit A=A1 B=B1 CIN=C1 O=O1 COUT=C0
+.subckt Somma1bit A=A0 B=B0 CIN=C0 O=O0 COUT=COUT
+
+.search Somma1bit.blif
+
+.end
+

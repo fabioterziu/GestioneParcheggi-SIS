@@ -1,0 +1,393 @@
+.model FSMD
+.inputs IN OUT SECTOR1 SECTOR2 SECTOR3
+.outputs SETTORE_NON_VALIDO SBARRA_IN SBARRA_OUT SECTOR_A SECTOR_B SECTOR_C
+.latch    SECTOR_A pa re NIL 0
+.latch    SECTOR_B pb re NIL 0
+.latch    SECTOR_C pc re NIL 0
+.latch    [28] LatchOut_v8   0
+.latch    [29] LatchOut_v9   1
+.latch    [30] LatchOut_v10   0
+.latch    Q0 D0 re NIL 0
+.latch    Q1 D1 re NIL 0
+.latch    Q2 D2 re NIL 0
+.latch    Q3 D3 re NIL 0
+.latch    Q4 D4 re NIL 0
+.latch    ALU REG re s3 1
+.latch    [444] [377] re NIL 0
+.latch    [445] [379] re NIL 0
+.latch    [446] [381] re NIL 0
+.latch    [447] [383] re NIL 0
+.latch    [448] [385] re NIL 0
+.latch    [374] [376] re s1 1
+.latch    [534] [467] re NIL 0
+.latch    [535] [469] re NIL 0
+.latch    [536] [471] re NIL 0
+.latch    [537] [473] re NIL 0
+.latch    [538] [475] re NIL 0
+.latch    [464] [466] re s2 1
+.names SECTOR1 SECTOR2 SECTOR3 r [863] [876] SETTORE_NON_VALIDO
+-11-1- 1
+1---11 1
+0--010 1
+.names IN OUT SECTOR1 SECTOR2 SECTOR3 SETTORE_NON_VALIDO pa pb pc [863] \
+SBARRA_IN
+011--00--1 1
+01-1-0-0-1 1
+01--10--01 1
+.names IN OUT SECTOR1 SECTOR2 SECTOR3 [863] [876] SBARRA_OUT
+101--10 1
+100011- 1
+100101- 1
+.names r [444] [445] [446] [447] [448] SECTOR_A
+011111 1
+.names r [534] [535] [536] [537] [538] SECTOR_B
+011111 1
+.names s3 r PA1 P0 P1 SECTOR_C
+101-- 1
+0--11 1
+.names OUT SECTOR1 SBARRA_OUT LatchOut_v8 LatchOut_v9 [29] [891] [902] s1
+---1---- 1
+-------1 1
+-0---0-- 1
+0-0-0--- 1
+1---0-1- 1
+.names SECTOR2 pb LatchOut_v9 [29] [30] [901] [907] s2
+----1-- 1
+------1 1
+0--0--- 1
+-10--1- 1
+.names SECTOR3 pc LatchOut_v9 [29] [901] [907] s3
+-----1 1
+0--0-- 1
+-10-1- 1
+.names s2 s3 LatchOut_v10 L1
+--1 1
+01- 1
+10- 1
+.names SECTOR1 SECTOR2 SETTORE_NON_VALIDO SBARRA_OUT s3 LatchOut_v9 \
+LatchOut_v10 [891] [901] L2
+------1-- 1
+-0-1----- 1
+----00--- 1
+1-0----01 1
+.names r LatchOut_v9 LatchOut_v10 [30] start
+--1- 1
+---1 1
+00-- 1
+.names IN OUT SECTOR1 [863] [876] r
+00010 1
+.names IN OUT SECTOR1 SECTOR2 SECTOR3 LatchOut_v8 LatchOut_v9 LatchOut_v10 \
+[30] [28]
+--------1 1
+-----10-- 1
+11111-10- 1
+.names start r LatchOut_v8 [28] [29]
+-1-- 1
+--11 1
+0--0 1
+.names LatchOut_v8 LatchOut_v9 LatchOut_v10 [30]
+110 1
+.names IN [890] A0
+11 1
+.names OUT [890] A1
+11 1
+.names IN [888] B0
+11 1
+.names OUT [888] B1
+11 1
+.names IN [889] C0
+11 1
+.names OUT [889] C1
+11 1
+.names C0 C1 REG D1 [873] PA1
+---10 1
+111-- 1
+.names start ALU
+0 1
+.names SECTOR1 D2 [855] [909] H2
+-10- 1
+1--1 1
+.names SECTOR2 D3 [855] [909] H3
+-10- 1
+1--1 1
+.names SECTOR3 D4 [855] [909] H4
+-10- 1
+1--1 1
+.names H4 [856] Z4
+10 1
+.names [110] [881] [108]
+11 1
+.names H2 [112] [110]
+11 1
+.names H3 H4 [862] [112]
+111 1
+.names [205] [856] [878] [204]
+-1- 1
+1-0 1
+.names H2 [206] [856] [205]
+--1 1
+01- 1
+.names Z4 [905] [206]
+01 1
+.names [108] [204] [853] [862] [877] [899] P0
+1----- 1
+---11- 1
+-0---1 1
+-10--0 1
+.names [108] [110] [204] [205] [853] [862] [878] [881] P1
+01------ 1
+--1-0--- 1
+---0--1- 1
+-0---1-1 1
+.names s3 C0 REG P0 [877] Q0
+-11-- 1
+0--1- 1
+1---1 1
+.names s3 C1 REG P1 [878] Q1
+-11-- 1
+0--1- 1
+1---1 1
+.names s3 H2 [110] [112] [205] [206] [854] [856] Q2
+11------ 1
+--01---- 1
+-1---0-- 1
+----1--0 1
+-1-0--1- 1
+.names s3 H3 H4 Z4 [112] [206] [856] [862] [905] Q3
+11------- 1
+-----10-- 1
+---1----0 1
+-1--0--1- 1
+--1-0--1- 1
+.names s3 H4 Z4 [856] [862] Q4
+11--- 1
+--00- 1
+-0--1 1
+.names start [374]
+0 1
+.names s1 [868] [400]
+01 1
+.names s1 [869] [401]
+01 1
+.names s1 [870] [402]
+01 1
+.names [92] [879] [90]
+11 1
+.names [400] [94] [92]
+11 1
+.names [401] [402] [858] [94]
+111 1
+.names [197] [874] [893] [196]
+-1- 1
+1-1 1
+.names [400] [859] [895] [197]
+-1- 1
+0-0 1
+.names [402] [858] [859] [443]
+01- 1
+0-0 1
+.names s1 A0 [376] [90] [196] [858] [874] [884] [894] [444]
+-11------ 1
+---1---1- 1
+1------0- 1
+----0---1 1
+---0-1-0- 1
+----1-0-0 1
+.names s1 A1 [92] [196] [197] [874] [879] [893] [445]
+---1-0-- 1
+--1----1 1
+1------0 1
+----0--0 1
+-10---1- 1
+.names s1 [400] [92] [94] [197] [868] [872] [874] [895] [446]
+--01----- 1
+1----1--- 1
+----1--0- 1
+-1-0--1-- 1
+-1-----01 1
+.names [401] [443] [869] [872] [874] [447]
+0-1-- 1
+-111- 1
+-001- 1
+-01-0 1
+-10-0 1
+.names s1 [443] [870] [448]
+01- 1
+1-1 1
+.names start [464]
+0 1
+.names s2 [864] [490]
+01 1
+.names s2 [865] [491]
+01 1
+.names s2 [866] [492]
+01 1
+.names [101] [880] [99]
+11 1
+.names [490] [103] [101]
+11 1
+.names [491] [492] [857] [103]
+111 1
+.names [201] [875] [896] [200]
+-1- 1
+1-1 1
+.names [490] [860] [898] [201]
+-1- 1
+0-0 1
+.names [492] [857] [860] [533]
+01- 1
+0-0 1
+.names s2 B0 [466] [99] [200] [857] [875] [885] [897] [534]
+-11------ 1
+---1---1- 1
+1------0- 1
+----0---1 1
+---0-1-0- 1
+----1-0-0 1
+.names s2 B1 [101] [200] [201] [875] [880] [896] [535]
+---1-0-- 1
+--1----1 1
+1------0 1
+----0--0 1
+-10---1- 1
+.names s2 [490] [101] [103] [201] [864] [871] [875] [898] [536]
+--01----- 1
+1----1--- 1
+----1--0- 1
+-1-0--1-- 1
+-1-----01 1
+.names [491] [533] [865] [871] [875] [537]
+0-1-- 1
+-111- 1
+-001- 1
+-01-0 1
+-10-0 1
+.names s2 [533] [866] [538]
+01- 1
+1-1 1
+.names C0 [853]
+0 1
+.names C1 [854]
+1 1
+.names PA1 REG [855]
+1- 1
+-1 1
+.names s3 [853] [856]
+1- 1
+-1 1
+.names B0 B1 [857]
+01 1
+.names A0 A1 [858]
+01 1
+.names A0 [859]
+0 1
+.names B0 [860]
+0 1
+.names L2 [861]
+1 1
+.names s3 [854] [862]
+01 1
+.names LatchOut_v8 LatchOut_v9 [863]
+00 1
+.names SECTOR1 [466] [471] [910] [864]
+-01- 1
+1--1 1
+.names SECTOR2 [466] [473] [910] [865]
+-01- 1
+1--1 1
+.names SECTOR3 [466] [475] [910] [866]
+-01- 1
+1--1 1
+.names SECTOR1 [376] [381] [911] [868]
+-01- 1
+1--1 1
+.names SECTOR2 [376] [383] [911] [869]
+-01- 1
+1--1 1
+.names SECTOR3 [376] [385] [911] [870]
+-01- 1
+1--1 1
+.names s2 [857] [871]
+01 1
+.names s1 [858] [872]
+01 1
+.names REG D0 [873]
+1- 1
+-0 1
+.names s1 [859] [874]
+1- 1
+-1 1
+.names s2 [860] [875]
+1- 1
+-1 1
+.names SECTOR2 SECTOR3 [876]
+1- 1
+-1 1
+.names [873] [877]
+0 1
+.names REG D1 [878]
+01 1
+.names [376] [379] [879]
+1- 1
+-1 1
+.names [466] [469] [880]
+1- 1
+-1 1
+.names D1 [855] [881]
+1- 1
+-1 1
+.names [376] [377] [884]
+1- 1
+-0 1
+.names [466] [467] [885]
+1- 1
+-0 1
+.names L1 L2 [888]
+10 1
+.names L1 [861] [889]
+11 1
+.names L1 [861] [890]
+01 1
+.names IN pa [891]
+1- 1
+-1 1
+.names [376] [379] [893]
+1- 1
+-0 1
+.names [376] [377] [894]
+1- 1
+-1 1
+.names [401] [402] [895]
+1- 1
+-1 1
+.names [466] [469] [896]
+1- 1
+-0 1
+.names [466] [467] [897]
+1- 1
+-1 1
+.names [491] [492] [898]
+1- 1
+-1 1
+.names D0 [855] [899]
+1- 1
+-1 1
+.names OUT [29] [901]
+10 1
+.names SETTORE_NON_VALIDO LatchOut_v10 [902]
+1- 1
+-1 1
+.names H3 [856] [905]
+0- 1
+-1 1
+.names IN OUT SBARRA_OUT LatchOut_v9 [28] [901] [902] [907]
+------1 1
+1--0-1- 1
+-0000-- 1
+.names PA1 REG [889] [909]
+011 1
+.names [466] [888] [910]
+11 1
+.names [376] [890] [911]
+11 1
+.end

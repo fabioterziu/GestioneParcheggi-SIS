@@ -1,0 +1,50 @@
+.model SB
+.inputs X0 X1 X2 X3 X4 S START r
+.outputs PB
+
+
+.subckt Alu I=START O=ALU
+.subckt Reg I=ALU  S=S O=REG
+.subckt MuxA I0=D0 I1=D1 I2=D2 I3=D3 I4=D4 X0=X0 X1=X1 X2=X2 X3=X3 X4=X4 S=REG O0=A0 O1=A1 O2=A2 O3=A3 O4=A4
+
+.subckt Comp PA=PA1 I0=A0 I1=A1 I2=A2 I3=A3 I4=A4 X0=V1 X1=V1 X2=V1 X3=V1 X4=V1
+
+.subckt DemuxS I0=A0 I1=A1 I2=A2 I3=A3 I4=A4 S=S A0=C0 A1=C1 A2=C2 A3=C3 A4=C4 B0=B0 B1=B1 B2=B2 B3=B3 B4=B4
+
+
+.subckt demuxIO I0=B0 I1=B1 I2=B2 I3=B3 I4=B4 S1=X0 S2=X1 A0=Y0 A1=Y1 A2=Y2 A3=Y3 A4=Y4 B0=Z0 B1=Z1 B2=Z2 B3=Z3 B4=Z4
+.subckt Sommatore A0=Y0 A1=Y1 A2=Y2 A3=Y3 A4=Y4 B0=V0 B1=V0 B2=V0 B3=V0 B4=V1 CIN=V0 COUT=COUT O0=N0 O1=N1 O2=N2 O3=N3 O4=N4
+.subckt Sottrattore A0=Z0 A1=Z1 A2=Z2 A3=Z3 A4=Z4 B0=V0 B1=V0 B2=V0 B3=V0 B4=V1 BIN=V0 BOUT=BOUT O0=M0 O1=M1 O2=M2 O3=M3 O4=M4
+.subckt Muxio I0=N0 I1=N1 I2=N2 I3=N3 I4=N4 X0=M0 X1=M1 X2=M2 X3=M3 X4=M4 S1=X0 S2=X1 O0=P0 O1=P1 O2=P2 O3=P3 O4=P4
+
+
+.subckt MuxA I0=P0 I1=P1 I2=P2 I3=P3 I4=P4 S=S X0=C0 X1=C1 X2=C2 X3=C3 X4=C4 O0=Q0 O1=Q1 O2=Q2 O3=Q3 O4=Q4
+
+.subckt Registro5bit A0=Q0 A1=Q1 A2=Q2 A3=Q3 A4=Q4 OUT0=D0 OUT1=D1 OUT2=D2 OUT3=D3 OUT4=D4
+
+.subckt Const0 C0=V0
+.subckt Const1 C1=V1
+
+
+.subckt Comp PA=PA2 I0=P0 I1=P1 I2=P2 I3=P3 I4=P4 X0=V1 X1=V1 X2=V1 X3=V1 X4=V1
+.subckt aluout I=HB r=r O=PB
+.subckt Mux1bit I0=PA2 I1=PA1 S=S O0=HB
+
+
+
+.search Alu.blif
+.search MuxA.blif
+.search Const0.blif
+.search Const1.blif
+.search Comp.blif
+.search DemuxS.blif
+.search demuxIO.blif
+.search Sommatore.blif
+.search Sottrattore.blif
+.search Muxio.blif
+.search Registro5bit.blif
+.search Reg.blif
+.search Mux1bit.blif
+.search aluout.blif
+
+.end

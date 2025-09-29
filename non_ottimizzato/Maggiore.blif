@@ -1,0 +1,20 @@
+.model Maggiore
+.inputs A4 A3 A2 A1 A0 B4 B3 B2 B1 B0
+.outputs M
+.subckt Xor A=A4 B=B4 O=O4
+.subckt Xor A=A3 B=B3 O=O3
+.subckt Xor A=A2 B=B2 O=O2
+.subckt Xor A=A1 B=B1 O=O1
+.subckt Xor A=A0 B=B0 O=O0
+
+.names A4 A3 A2 A1 A0 O4 O3 O2 O1 O0 M
+1----1---- 1
+-1---01--- 1
+--1--001-- 1
+---1-0001- 1
+----100001 1
+
+
+.search Xor.blif
+.end
+

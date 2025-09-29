@@ -1,0 +1,36 @@
+.model DemuxS
+.inputs I0 I1 I2 I3 I4 S
+.outputs A0 A1 A2 A3 A4 B0 B1 B2 B3 B4
+
+.names I0 S A0
+11 1
+
+.names I1 S A1
+11 1
+
+.names I2 S A2
+11 1
+
+.names I3 S A3
+11 1
+
+.names I4 S A4
+11 1
+
+.names I0 S B0
+10 1
+
+.names I1 S B1
+10 1
+
+.names I2 S B2
+10 1
+
+.names I3 S B3
+10 1
+
+.names I4 S B4
+10 1
+
+.end
+

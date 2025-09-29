@@ -1,0 +1,26 @@
+.model MuxA
+.inputs S I0 I1 I2 I3 I4 X0 X1 X2 X3 X4
+.outputs O0 O1 O2 O3 O4
+
+.names S I0 X0 O0
+1-1 1
+01- 1
+
+.names S I1 X1 O1
+1-1 1
+01- 1
+
+.names S I2 X2 O2
+1-1 1
+01- 1
+
+.names S I3 X3 O3
+1-1 1
+01- 1
+
+.names S I4 X4 O4
+1-1 1
+01- 1
+
+.end
+

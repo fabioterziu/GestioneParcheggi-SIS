@@ -1,0 +1,14 @@
+.model Registro5bit
+.inputs A0 A1 A2 A3 A4
+.outputs OUT0 OUT1 OUT2 OUT3 OUT4
+
+.subckt registro1 A=A0 OUT=OUT0
+.subckt registro1 A=A1 OUT=OUT1
+.subckt registro1 A=A2 OUT=OUT2
+.subckt registro1 A=A3 OUT=OUT3
+.subckt registro1 A=A4 OUT=OUT4
+
+.search registro1.blif
+
+.end
+
