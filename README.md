@@ -4,7 +4,7 @@
 ## DESCRIZIONE:
 Elaborato sviluppato in coppia per l'esame di Architettura degli Elaboratori (laboratorio) [Anno 2023].  
 
-L’ elaborato consiste nella gestione di un parcheggio automatizzato per automobili.  
+Il progetto consiste nella gestione di un parcheggio automatizzato per automobili.  
 Il parcheggio è suddiviso in tre settori:
 - Settore “A” 31 posti disponibili massimi;  
 - Settore “B” 31 posti disponibili massimi;  
