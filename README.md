@@ -1,4 +1,4 @@
-# 🚗 Parcheggio automatizzato CLI con Architettura FSMD (sintesi logica SIS)
+# 🚗 Parcheggio automatizzato CLI con architettura FSMD (sintesi logica SIS)
 
 
 ## DESCRIZIONE:
