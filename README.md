@@ -1,4 +1,4 @@
-# 🚗 Parcheggio automatizzato con architettura FSMD (sintesi logica SIS)
+# 🚗 Parcheggio automatizzato con architettura FSMD (tool SIS)
 
 
 ## DESCRIZIONE:
